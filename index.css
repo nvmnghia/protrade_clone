@@ -1,0 +1,17 @@
+* { margin: 0 }
+
+body {
+  /********************************************************************************
+   * Background
+   ********************************************************************************/
+  background-image: url('assets/dpro_login_bg.jpg');
+
+  /* background-color should always be specified */
+  /* https://developer.mozilla.org/en-US/docs/Web/CSS/background-image#:~:text=a%20none%20value.-,Note,-%3A%20Even%20if%20the */
+  background-color: #1d172a;    /* Most dominant color in the background */
+
+  background-position:
+    center   /* Center horizontal */
+    bottom;  /* Mimic original (image bottom sticks to page bottom) */
+  min-height: 100vh;  /* height must be at least viewport height, so the above line works even without content */
+}
