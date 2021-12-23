@@ -1,0 +1,72 @@
+header {
+  padding: 8px;
+  height: 42px;
+  background-color: #131722;
+}
+
+/********************************************************************************
+ * General layout
+ ********************************************************************************/
+
+.column-layout {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Fixed height header, container fills the rest of the viewport.
+ * Remember, body already has .column-layout */
+ body {
+  min-height: 100vh;
+}
+.container {
+  flex: 1;
+}
+
+#col1, #col2, #col3 {
+  width: 100%;
+}
+
+#chart {
+  background-color: aliceblue;
+  flex: 3;
+}
+
+#market {
+  background-color: beige;
+  flex: 2;
+}
+
+#history {
+  background-color: cadetblue;
+  flex: 3;
+}
+
+#watchlist {
+  background-color: darkblue;
+  flex: 2;
+}
+
+#orderbook {
+  background-color: firebrick;
+  flex: 2;
+}
+
+#placeorder {
+  background-color: gainsboro;
+  flex: 1;
+}
+
+
+/********************************************************************************
+ * Responsive
+ ********************************************************************************/
+
+/* Desktop
+ * TODO: Change 900px to a better breakpoint */
+@media only screen and (min-width: 900px) {
+  .container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+  }
+}
