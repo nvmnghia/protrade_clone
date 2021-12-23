@@ -9,32 +9,36 @@
     <main>
       <img class="logo" src="assets/pt_trial.a0934fd1.svg" alt="Protrade Logo">
       <div class="container">
-        <form action="/login" method="POST">
-          <h3>Login with VNDIRECT account</h3>
+        <h3 id="login_legend">Login with VNDIRECT account</h3>
 
-          <div class="form-row">
-            <label for="username">Username</label>
-            <input type="text" id="username" name="username" class="pad-textbox"/>
+        <div id="container-narrow">
+          <form action="/login" method="POST">
+            <div class="form-row">
+              <label for="username">Username</label>
+              <input type="text" id="username" name="username" class="border-textbox"/>
+            </div>
+
+            <div class="form-row">
+              <label for="password">Password</label>
+              <input type="password" id="password" name="password" class="border-textbox"/>
+            </div>
+
+            <div class="form-row">
+              <input type="checkbox" id="rememberMe" name="rememberMe"/>
+              <label for="rememberMe">Save Password for next Login</label>
+            </div>
+
+            <button id="login" class="border-textbox">Login</button>
+          </form>
+
+          <hr>
+
+          <button id="signup" class="border-textbox">Sign Up</button>
+
+          <div id="support-box">
+            <a id="support" href="https://www.vndirect.com.vn/portal/tro-giup/hoi-dap-huong-dan.shtml">Request for Help</a>
           </div>
-
-          <div class="form-row">
-            <label for="password">Password</label>
-            <input type="password" id="password" name="password" class="pad-textbox"/>
-          </div>
-
-          <div class="form-row">
-            <input type="checkbox" id="rememberMe" name="rememberMe"/>
-            <label for="rememberMe">Save Password for next Login</label>
-          </div>
-
-          <button id="login" class="pad-textbox">Login</button>
-        </form>
-
-        <hr>
-
-        <button id="signup" class="pad-textbox">Sign Up</button>
-
-        <a id="request-help" href="https://www.vndirect.com.vn/portal/tro-giup/hoi-dap-huong-dan.shtml">Request for Help</a>
+        </div>
       </div>
     </main>
 </body>
