@@ -1,0 +1,12 @@
+body {
+  background-color: #2f3240;
+}
+
+/* Make chart.js responsive
+ * https://www.chartjs.org/docs/latest/configuration/responsive.html */
+.chart-container {
+  position: relative;
+
+  width: 100vh;
+  height: 100vh;
+}
