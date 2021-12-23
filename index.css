@@ -4,7 +4,7 @@
  * Background
  ********************************************************************************/
 
- body {
+body {
   background-image: url('assets/dpro_login_bg.jpg');
 
   /* background-color should always be specified */
@@ -35,6 +35,7 @@ main {
 .container {
   background-color: rgba(248, 248, 248, 0.93);
   padding: 25px;
+  margin-top: 25px;
 
   border-radius: 10px;
 }
@@ -60,12 +61,16 @@ main {
 }
 
 .form-row > label[for=rememberMe] {
-  display: inline-block;
+  display: inline;
 }
 
 .form-row > input {
   padding: 7px;
   margin-bottom: 10px;
+}
+
+.form-row > input:focus {
+  border: 1px solid #f7941d;
 }
 
 .form-row > input[type=text], .form-row > input[type=password] {
@@ -80,6 +85,8 @@ button {
   color: #fff;
   font-weight: 700;
   transition: all 0.2s ease-in-out;
+
+  --box-shadow-offset: 0 0 6px 0.5px;
 }
 
 #login {
@@ -88,8 +95,7 @@ button {
 
 #login:hover, #login:focus {
   background-color: #f89b2c;
-  box-shadow: 0 6px 0.5px #f8a036;
-  outline: none;
+  box-shadow: var(--box-shadow-offset) #f8a036;
 }
 
 #signup {
@@ -98,14 +104,13 @@ button {
 
 #signup:hover, #signup:focus {
   background-color: #1ad257;
-  box-shadow: 0 0 6px 0.5px #1bdb5a;
-  outline: none;
+  box-shadow: var(--box-shadow-offset) #1bdb5a;
 }
 
 /* Padding for textbox: button + input textbox */
 .border-textbox {
   border-radius: 5px;
-  border: 1px solid rgba(0,0,0,.2);
+  border: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 #support-box {
@@ -121,6 +126,15 @@ button {
 
 #support:hover, #support:focus {
   color: #f7941d;
+}
+
+/* Outline fixes */
+*:focus {
+  outline: 1px solid #f7941d;
+}
+
+input, button {
+  outline: none;
 }
 
 hr {
