@@ -24,12 +24,8 @@ body {
 
 body {
   display: flex;
+  justify-content: space-around;
   align-items: center;
-}
-
-main {
-  width: 100%;
-  margin: 10%;
 }
 
 .container {
@@ -140,4 +136,24 @@ input, button {
 hr {
   border: 1px dotted #ddd;
   margin: 0.5em auto;
+}
+
+
+/********************************************************************************
+ * Responsive
+ ********************************************************************************/
+
+/* Phone */
+@media only screen and (max-width: 576px) {
+  main {
+    width: 100%;
+    margin: 25px;
+  }
+}
+
+/* Tablet + Desktop */
+@media only screen and (min-width: 577px) {
+  main {
+    width: 350px;
+  }
 }
