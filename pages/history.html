@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>History</title>
+    <link rel="stylesheet" href="../reset.css">
+    <link rel="stylesheet" href="shared.css">
+    <link rel="stylesheet" href="history.css">
+  </head>
+  <body>
+    <div id="summary">
+      <div id="futures">
+        VN30F2201
+      </div>
+      <div id="floor">
+        <span>Floor:</span>
+        <br>
+        <span>1400</span>
+      </div>
+      <div id="reference">
+        <span>Reference:</span>
+        <br>
+        <span>1500</span>
+      </div>
+      <div id="ceil">
+        <span>Ceil:</span>
+        <br>
+        <span>1600</span>
+      </div>
+    </div>
+
+    <div id="table-selector">
+      <a id="price-step" class="table-selected">Price step</a>
+      <a id="trading-history">Trading history</a>
+    </div>
+
+    <div id="table-placeholder">
+      <table id="price-step-table">
+        <thead>
+          <tr>
+            <th id="buy-quantity" scope="col">Buy Qty</th>
+            <th id="buy-price" scope="col">Buy Price</th>
+            <th id="sell-price" scope="col">Sell Price</th>
+            <th id="sell-quantity" scope="col">Sell Qty</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+
+        <!-- Row template -->
+        <template>
+          <tr>
+            <td><span></span></td>
+            <td>
+              <span></span>
+              <div class="price-step-cell-bg"></div>
+            </td>
+            <td>
+              <span></span>
+              <div class="price-step-cell-bg"></div>
+            </td>
+            <td><span></span></td>
+          </tr>
+        </template>
+      </table>
+
+      <table id="trading-history-table" style="display: none;">
+        <thead>
+          <tr>
+            <th scope="col">Time</th>
+            <th scope="col">Price</th>
+            <th scope="col">+/-</th>
+            <th scope="col">Qty</th>
+            <th scope="col">Agg</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+
+        <!-- Row template -->
+        <template>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </template>
+      </table>
+    </div>
+
+    <script src="history.js"></script>
+  </body>
+</html>
