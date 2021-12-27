@@ -1,0 +1,18 @@
+body {
+  height: 100vh;
+}
+
+* {
+  color: white;
+  font-size: 13px;
+}
+
+i.fa-caret-left:hover, i.fa-caret-right:hover {
+  cursor: pointer
+}
+
+th > span {
+  display: inline-block;
+  text-align: center;
+  min-width: 16px;
+}
