@@ -16,3 +16,11 @@ th > span {
   text-align: center;
   min-width: 16px;
 }
+
+.positive {
+  color: lime;
+}
+
+.negative {
+  color: red;
+}

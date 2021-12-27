@@ -79,21 +79,34 @@ class WatchListTable extends Table {
 
     renderRow(rowData) {
         const row = this.rowTemplate.content.cloneNode(true);
+        const cell = cellNum => row.querySelector(`td:nth-child(${cellNum})`);    // 1-based cellNum
+
         const actualDiff = rowData[2];
         rowData = this.formatData(rowData);
 
         for (let i = 0; i < rowData.length; i++) {
-            const cell = row.querySelector(`td:nth-child(${i + 1})`);
-            cell.textContent = rowData[i];
-
-            // Save actual diff to data-, so that subsequent changes in display style
-            // can use this correct value, instead of the rounded display value.
-            if (i == 2) {
-                cell.dataset.actualDiff = actualDiff;
-            }
+            cell(i + 1).textContent = rowData[i];
         }
 
+        // Update color to match value sign
+        updateColorValue(cell(2));
+        updateColorValue(cell(3));
+
+        // Save actual diff to data-, so that subsequent changes in display style
+        // can use this correct value, instead of the rounded display value.
+        cell(2).dataset.actualDiff = actualDiff;
+
         this.tableBody.appendChild(row);
+
+        function updateColorValue(element) {
+            if (element.textContent.startsWith('-')) {
+                element.classList.remove('positive');
+                element.classList.add('negative');
+            } else {
+                element.classList.remove('negative');
+                element.classList.add('positive');
+            }
+        }
     }
 
     toggleRelativeDiff() {
