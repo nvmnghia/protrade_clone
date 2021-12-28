@@ -2,7 +2,7 @@
   color: white;
 }
 
-select, button {
+select, button, option {
   color: initial;
 }
 

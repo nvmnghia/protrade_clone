@@ -52,18 +52,19 @@
       <div class="form-row mv-10">
         <label for="price">Price:</label>
         <select id="price" name="price">
-          <option value="" selected>-- Please choose a price --</option>
-
-          <template>
-            <option></option>
-          </template>
+          <option value="" disabled selected>-- Please choose a price --</option>
+          <option value="ATO">ATO</option>
+          <option value="ATC">ATC</option>
+          <option value="MTL">MTL</option>
+          <option value="MOK">MOK</option>
+          <option value="MAK">MAK</option>
         </select>
       </div>
 
       <!-- Quantity -->
       <div class="form-row mv-10">
         <label for="quantity">Quantity:</label>
-        <input id="quantity" name="quantity" type="number" min="0" />
+        <input id="quantity" name="quantity" type="number" min="0" placeholder="Qty." />
       </div>
 
       <!-- Save -->
@@ -96,13 +97,13 @@
       <!-- Price -->
       <div class="form-row mv-10">
         <label for="price">Price:</label>
-        <input id="price" name="price" type="text">
+        <input id="price" name="price" type="text" placeholder="Price">
       </div>
 
       <!-- Quantity -->
       <div class="form-row mv-10">
         <label for="quantity">Quantity:</label>
-        <input id="quantity" name="quantity" type="text">
+        <input id="quantity" name="quantity" type="text" placeholder="Quantity">
       </div>
 
       <!-- Trigger price -->
@@ -118,7 +119,7 @@
             <label for="price-higher">≥</label>
           </span>
         </div>
-        <input id="trigger-price" name="trigger-price" type="text">
+        <input id="trigger-price" name="trigger-price" type="text" placeholder="Trigger Price">
       </div>
 
       <!-- Expiration -->
