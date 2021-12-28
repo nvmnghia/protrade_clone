@@ -17,7 +17,7 @@
     <!-- Order types -->
     <div class="order-type">
       <div class="order-type-item">
-        <input id="normal-order" name="type" value="normal" type="radio" />
+        <input id="normal-order" name="type" value="normal" type="radio" checked/>
         <label for="normal-order">Normal Order</label>
       </div>
       <div class="order-type-item">
@@ -25,17 +25,17 @@
         <label for="stop-order">Stop Order</label>
       </div>
       <div class="order-type-item">
-        <input id="trailing-order" name="type" value="trailing" type="radio" />
+        <input id="trailing-order" name="type" value="trailing" type="radio" disabled/>
         <label for="trailing-order">Trailing Order</label>
       </div>
       <div class="order-type-item">
-        <input id="oso-order" name="type" value="oso" type="radio" />
+        <input id="oso-order" name="type" value="oso" type="radio" disabled/>
         <label for="oso-order">OSO Order</label>
       </div>
     </div>
 
     <!-- Normal order form -->
-    <form id="normal-order-form" style="display: none;">
+    <form id="normal-order-form">
       <!-- Symbol -->
       <div class="form-row mv-10">
         <label for="symbol">Symbol:</label>
@@ -80,7 +80,7 @@
     </form>
 
     <!-- Stop order form -->
-    <form id="stop-order-form">
+    <form id="stop-order-form" style="display: none;">
       <!-- Symbol -->
       <div class="form-row mv-10">
         <label for="symbol">Symbol:</label>
