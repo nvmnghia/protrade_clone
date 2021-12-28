@@ -7,33 +7,34 @@
     <link rel="stylesheet" href="placeorder.css" />
   </head>
   <body>
-    <div>
+    <div class="mv-10">
       Error here
     </div>
 
-    <div>
+    <!-- Order types -->
+    <div class="order-type">
       <div class="order-type-item">
-        <label for="normal-order">Normal Order</label>
         <input id="normal-order" name="type" value="normal" type="radio" />
+        <label for="normal-order">Normal Order</label>
       </div>
       <div class="order-type-item">
-        <label for="stop-order">Stop Order</label>
         <input id="stop-order" name="type" value="stop" type="radio" />
+        <label for="stop-order">Stop Order</label>
       </div>
       <div class="order-type-item">
-        <label for="trailing-order">Trailing Order</label>
         <input id="trailing-order" name="type" value="trailing" type="radio" />
+        <label for="trailing-order">Trailing Order</label>
       </div>
       <div class="order-type-item">
-        <label for="oso-order">OSO Order</label>
         <input id="oso-order" name="type" value="oso" type="radio" />
+        <label for="oso-order">OSO Order</label>
       </div>
     </div>
 
     <!-- Normal order form -->
     <form id="normal-order-form">
       <!-- Symbol -->
-      <div class="form-row">
+      <div class="form-row mv-10">
         <label for="symbol">Symbol:</label>
         <select id="symbol" name="symbol">
           <option value="" selected>-- Please choose a symbol --</option>
@@ -45,7 +46,7 @@
       </div>
 
       <!-- Price -->
-      <div class="form-row">
+      <div class="form-row mv-10">
         <label for="price">Price:</label>
         <select id="price" name="price">
           <option value="" selected>-- Please choose a price --</option>
@@ -57,19 +58,19 @@
       </div>
 
       <!-- Quantity -->
-      <div class="form-row">
+      <div class="form-row mv-10">
         <label for="quantity">Quantity:</label>
         <input id="quantity" name="quantity" type="number" min="0" />
       </div>
 
       <!-- Save -->
-      <div class="form-row">
+      <div class="form-row mv-10">
         <label for="save">Save order:</label>
         <input id="save" name="save" type="checkbox" />
       </div>
 
       <!-- Buy/Sell -->
-      <div class="button-row">
+      <div class="button-row mv-10">
         <button>Buy</button>
         <button>Sell</button>
       </div>
