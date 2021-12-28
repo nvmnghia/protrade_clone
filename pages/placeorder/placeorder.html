@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Place Order</title>
+    <link rel="stylesheet" href="../../reset.css" />
+    <link rel="stylesheet" href="../shared.css" />
+    <link rel="stylesheet" href="placeorder.css" />
+  </head>
+  <body>
+    <div>
+      Error here
+    </div>
+
+    <div>
+      <div class="order-type-item">
+        <label for="normal-order">Normal Order</label>
+        <input id="normal-order" name="type" value="normal" type="radio" />
+      </div>
+      <div class="order-type-item">
+        <label for="stop-order">Stop Order</label>
+        <input id="stop-order" name="type" value="stop" type="radio" />
+      </div>
+      <div class="order-type-item">
+        <label for="trailing-order">Trailing Order</label>
+        <input id="trailing-order" name="type" value="trailing" type="radio" />
+      </div>
+      <div class="order-type-item">
+        <label for="oso-order">OSO Order</label>
+        <input id="oso-order" name="type" value="oso" type="radio" />
+      </div>
+    </div>
+
+    <!-- Normal order form -->
+    <form id="normal-order-form">
+      <!-- Symbol -->
+      <div class="form-row">
+        <label for="symbol">Symbol:</label>
+        <select id="symbol" name="symbol">
+          <option value="" selected>-- Please choose a symbol --</option>
+
+          <template>
+            <option></option>
+          </template>
+        </select>
+      </div>
+
+      <!-- Price -->
+      <div class="form-row">
+        <label for="price">Price:</label>
+        <select id="price" name="price">
+          <option value="" selected>-- Please choose a price --</option>
+
+          <template>
+            <option></option>
+          </template>
+        </select>
+      </div>
+
+      <!-- Quantity -->
+      <div class="form-row">
+        <label for="quantity">Quantity:</label>
+        <input id="quantity" name="quantity" type="number" min="0" />
+      </div>
+
+      <!-- Save -->
+      <div class="form-row">
+        <label for="save">Save order:</label>
+        <input id="save" name="save" type="checkbox" />
+      </div>
+
+      <!-- Buy/Sell -->
+      <div class="button-row">
+        <button>Buy</button>
+        <button>Sell</button>
+      </div>
+    </form>
+
+    <!-- Stop order form -->
+    <form id="stop-order-form" style="display: none;">
+      <div class="form-row">
+        <label for="symbol">Symbol:</label>
+        <select id="symbol" name="symbol">
+          <option value="" selected>-- Please choose a symbol --</option>
+
+          <template>
+            <option></option>
+          </template>
+        </select>
+      <div class="form-row">
+        <label for="price">Price:</label>
+        <input id="price" name="price" type="text"></div>
+      <div class="form-row">
+        <label for="quantity">Quantity:</label>
+        <input id="quantity" name="quantity" type="text"></div>
+      <div class="form-row">
+        <label for="trigger-price">Trigger price</label>
+        <span>
+          <label for="price-lower">
+            <input id="price-lower" name="trigger-condition" value="lower"/>
+            <span>≤</span>
+          </label>
+        </span>
+        <span>
+          <label for="price-higher">
+            <input id="price-higher" name="trigger-condition" value="higher"/>
+            <span>≥</span>
+          </label>
+        </span>
+        <input id="trigger-price" name="trigger-price" type="text"></div>
+      <div class="form-row">
+        <label for="expiration">Expiration:</label>
+        <input id="expiration" name="expiration" type="date"></div>
+    </form>
+  </body>
+</html>
