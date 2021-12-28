@@ -11,8 +11,13 @@ select, button {
   justify-content: space-between;
 }
 
+/********************************************************************************
+ * General forms
+ ********************************************************************************/
+
 .form-row {
   display: flex;
+  align-items: center;
 }
 
 .form-row > label {
@@ -31,4 +36,39 @@ select, button {
   display: flex;
   justify-content: center;
   gap: 10px;
+}
+
+/********************************************************************************
+ * Stop order form
+ ********************************************************************************/
+
+#price-lower, #price-higher {
+  display: none;
+}
+
+#price-lower + label, #price-higher + label {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin-right: 6px;
+
+  line-height: 30px;
+  text-align: center;
+
+  cursor: pointer;
+
+  border: 1px solid white;
+  border-radius: 3px;
+}
+
+#price-lower:checked + label, #price-higher:checked + label {
+  background-color: #f7941d;
+}
+
+#trigger-condition {
+  flex: 1;
+}
+
+#trigger-price {
+  flex: 6;
 }

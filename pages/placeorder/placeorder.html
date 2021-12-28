@@ -35,7 +35,7 @@
     </div>
 
     <!-- Normal order form -->
-    <form id="normal-order-form">
+    <form id="normal-order-form" style="display: none;">
       <!-- Symbol -->
       <div class="form-row mv-10">
         <label for="symbol">Symbol:</label>
@@ -80,9 +80,9 @@
     </form>
 
     <!-- Stop order form -->
-    <form id="stop-order-form" style="display: none;">
+    <form id="stop-order-form">
       <!-- Symbol -->
-      <div class="form-row">
+      <div class="form-row mv-10">
         <label for="symbol">Symbol:</label>
         <select id="symbol" name="symbol">
           <option value="" selected>-- Please choose a symbol --</option>
@@ -94,37 +94,35 @@
       </div>
 
       <!-- Price -->
-      <div class="form-row">
+      <div class="form-row mv-10">
         <label for="price">Price:</label>
         <input id="price" name="price" type="text">
       </div>
 
       <!-- Quantity -->
-      <div class="form-row">
+      <div class="form-row mv-10">
         <label for="quantity">Quantity:</label>
         <input id="quantity" name="quantity" type="text">
       </div>
 
       <!-- Trigger price -->
-      <div class="form-row">
+      <div class="form-row mv-10">
         <label for="trigger-price">Trigger price</label>
-        <span>
-          <label for="price-lower">
-            <input id="price-lower" name="trigger-condition" value="lower"/>
-            <span>≤</span>
-          </label>
-        </span>
-        <span>
-          <label for="price-higher">
-            <input id="price-higher" name="trigger-condition" value="higher"/>
-            <span>≥</span>
-          </label>
-        </span>
+        <div id="trigger-condition">
+          <span>
+            <input id="price-lower" name="trigger-condition" value="lower" type="radio" checked/>
+            <label for="price-lower">≤</label>
+          </span>
+          <span>
+            <input id="price-higher" name="trigger-condition" value="higher" type="radio"/>
+            <label for="price-higher">≥</label>
+          </span>
+        </div>
         <input id="trigger-price" name="trigger-price" type="text">
       </div>
 
       <!-- Expiration -->
-      <div class="form-row">
+      <div class="form-row mv-10">
         <label for="expiration">Expiration:</label>
         <input id="expiration" name="expiration" type="date">
       </div>
