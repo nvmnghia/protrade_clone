@@ -11,6 +11,9 @@
       Error here
     </div>
 
+    <!-- The forms below each has 2 buttons. The 2 buttons have the same name.
+    Upon submission, the server can check which button is clicked. -->
+
     <!-- Order types -->
     <div class="order-type">
       <div class="order-type-item">
@@ -71,13 +74,14 @@
 
       <!-- Buy/Sell -->
       <div class="button-row mv-10">
-        <button>Buy</button>
-        <button>Sell</button>
+        <button name="action" value="buy">Buy</button>
+        <button name="action" value="sell">Sell</button>
       </div>
     </form>
 
     <!-- Stop order form -->
     <form id="stop-order-form" style="display: none;">
+      <!-- Symbol -->
       <div class="form-row">
         <label for="symbol">Symbol:</label>
         <select id="symbol" name="symbol">
@@ -87,12 +91,21 @@
             <option></option>
           </template>
         </select>
+      </div>
+
+      <!-- Price -->
       <div class="form-row">
         <label for="price">Price:</label>
-        <input id="price" name="price" type="text"></div>
+        <input id="price" name="price" type="text">
+      </div>
+
+      <!-- Quantity -->
       <div class="form-row">
         <label for="quantity">Quantity:</label>
-        <input id="quantity" name="quantity" type="text"></div>
+        <input id="quantity" name="quantity" type="text">
+      </div>
+
+      <!-- Trigger price -->
       <div class="form-row">
         <label for="trigger-price">Trigger price</label>
         <span>
@@ -107,10 +120,22 @@
             <span>≥</span>
           </label>
         </span>
-        <input id="trigger-price" name="trigger-price" type="text"></div>
+        <input id="trigger-price" name="trigger-price" type="text">
+      </div>
+
+      <!-- Expiration -->
       <div class="form-row">
         <label for="expiration">Expiration:</label>
-        <input id="expiration" name="expiration" type="date"></div>
+        <input id="expiration" name="expiration" type="date">
+      </div>
+
+      <!-- Buy/Sell -->
+      <div class="button-row mv-10">
+        <button name="action" value="buy">Buy</button>
+        <button name="action" value="sell">Sell</button>
+      </div>
     </form>
+
+    <script src="placeorder.js"></script>
   </body>
 </html>
