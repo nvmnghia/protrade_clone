@@ -21,9 +21,34 @@ function toggleForm(radioEvent) {
     document.getElementById(formID).style.display = 'block';
 }
 
-window.onload = () => {
-    preventReloadBuySell();
+function hideErrorBanner() {
+    document.getElementById('error-banner').style.display = 'none';
+}
 
+function showErrorBanner() {
+    document.getElementById('error-banner').style.display = 'block';
+}
+
+function setupErrorBanner() {
+    // Hide error banner
+    document.getElementById('normal-order').addEventListener('change', hideErrorBanner);
+    document.getElementById('stop-order').addEventListener('change', hideErrorBanner);
+
+    // Show error banner
+    document.querySelector('label[for=trailing-order]').addEventListener('click', showErrorBanner);
+    document.querySelector('label[for=oso-order]').addEventListener('click', showErrorBanner);
+    document.querySelectorAll('form').forEach(form => {
+        form.addEventListener('submit', showErrorBanner);
+    })
+}
+
+function setupFormRadio() {
     document.getElementById('normal-order').onchange = toggleForm;
     document.getElementById('stop-order').onchange = toggleForm;
+}
+
+window.onload = () => {
+    preventReloadBuySell();
+    setupErrorBanner();
+    setupFormRadio();
 }

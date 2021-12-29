@@ -24,6 +24,13 @@ input:not([type=radio]), select, option {
 
 label { line-height: 30px; }
 
+#error-banner {
+  display: none;
+  text-align: center;
+  color: red;
+  margin: 5px 0;
+}
+
 /********************************************************************************
  * General forms
  ********************************************************************************/
