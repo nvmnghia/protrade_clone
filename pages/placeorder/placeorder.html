@@ -35,11 +35,11 @@
     </div>
 
     <!-- Normal order form -->
-    <form id="normal-order-form">
+    <form id="normal-order-form" method="post" action="/order/normal">
       <!-- Symbol -->
       <div class="form-row mv-10">
         <label for="symbol-normal">Symbol:</label>
-        <select id="symbol-normal" name="symbol-normal">
+        <select id="symbol-normal" name="symbol">
           <option value="" selected>-- Please choose a symbol --</option>
 
           <template>
@@ -52,7 +52,7 @@
       <!-- TODO: use tooltips -->
       <div class="form-row mv-10">
         <label for="price-normal">Price:</label>
-        <select id="price-normal" name="price-normal">
+        <select id="price-normal" name="price">
           <option value="" disabled selected>-- Please choose a price --</option>
           <option value="ATO">ATO</option>
           <option value="ATC">ATC</option>
@@ -64,8 +64,8 @@
 
       <!-- Quantity -->
       <div class="form-row mv-10">
-        <label for="quantity-stop">Quantity:</label>
-        <input id="quantity-stop" name="quantity-stop" type="number" min="0" placeholder="Qty." />
+        <label for="quantity-normal">Quantity:</label>
+        <input id="quantity-normal" name="quantity" type="number" min="0" placeholder="Quantity" />
       </div>
 
       <!-- Save -->
@@ -82,11 +82,11 @@
     </form>
 
     <!-- Stop order form -->
-    <form id="stop-order-form" style="display: none;">
+    <form id="stop-order-form" method="post" action="/order/stop" style="display: none;">
       <!-- Symbol -->
       <div class="form-row mv-10">
         <label for="symbol-stop">Symbol:</label>
-        <select id="symbol-stop" name="symbol-stop">
+        <select id="symbol-stop" name="symbol">
           <option value="" selected>-- Please choose a symbol --</option>
 
           <template>
@@ -98,13 +98,13 @@
       <!-- Price -->
       <div class="form-row mv-10">
         <label for="price-stop">Price:</label>
-        <input id="price-stop" name="price-stop" type="text" placeholder="Price">
+        <input id="price-stop" name="price" type="text" placeholder="Price">
       </div>
 
       <!-- Quantity -->
       <div class="form-row mv-10">
         <label for="quantity-stop">Quantity:</label>
-        <input id="quantity-stop" name="quantity-stop" type="text" placeholder="Quantity">
+        <input id="quantity-stop" name="quantity" type="text" placeholder="Quantity">
       </div>
 
       <!-- Trigger price -->
