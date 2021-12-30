@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Orderbook</title>
+    <link rel="stylesheet" href="../../reset.css">
+    <link rel="stylesheet" href="orderbook.css">
+  </head>
+  <body>
+    <!-- Refresh or close the panel -->
+    <div id="panel-control">
+      <i class="fa-regular fa-arrows-rotate"></i>
+      <i class="fa-regular fa-minus"></i>
+    </div>
+
+    <!-- Table selector -->
+    <div>
+      <a id="day-order" class="table-selected">Day order</a>
+      <a id="conditional-order">Conditional order</a>
+    </div>
+
+    <table id="day-order-table">
+      <thead>
+        <tr>
+          <th scope="col">Order</th>
+          <th scope="col">Symbol</th>
+          <th scope="col">Quantity</th>
+          <th scope="col">Price</th>
+          <th scope="col">WTF</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <table id="conditional-order-table">
+      <thead>
+        <tr>
+          <th scope="col">Order</th>
+          <th scope="col">Symbol</th>
+          <th scope="col">Trigger Price</th>
+          <th scope="col">Quantity</th>
+          <th scope="col">Price</th>
+          <th scope="col">Expiration Date</th>
+          <th scope="col">WTf</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </body>
+</html>
