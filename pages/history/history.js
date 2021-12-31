@@ -193,7 +193,11 @@ class TradingHistoryTable extends Table {
     }
 }
 
-function toggleTable() {
+function toggleTable(event) {
+    if (event.target.classList.contains('table-selected')) {
+        return;
+    }
+
     selectPriceStepTable.classList.toggle('table-selected');
     selectTradingHistoryTable.classList.toggle('table-selected');
 
