@@ -50,6 +50,10 @@
   flex: 1;
 }
 
+* {
+  color: white;
+  font-family: sans-serif;
+}
 
 /********************************************************************************
  * Details
@@ -69,6 +73,25 @@ header {
 iframe {
   border-width: 0px;
   padding: 1px;
+}
+
+
+/********************************************************************************
+ * Header
+ ********************************************************************************/
+
+header > img {
+  max-width: 100%;
+  max-height: 100%;
+  /* position: absolute; */
+}
+
+header {
+  display: flex;
+}
+
+#account-dropdown {
+  margin-left: auto;
 }
 
 
