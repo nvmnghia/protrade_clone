@@ -119,11 +119,14 @@ class PriceStepTable extends Table {
         rowData = this.formatData(rowData);
 
         for (let i = 0; i < rowData.length; i++) {
-            row.querySelector(`td:nth-child(${i + 1}) > span`).textContent = rowData[i];
+            const cell = row.querySelector(`td:nth-child(${i + 1})`);
+            const cellData = rowData[i];
+
+            cell.querySelector('span').textContent = cellData;
 
             if (i == 1 || i == 2) {
-                const percentage = rowData / 20;    // rowData * 100 / 2000
-                row.querySelector('div').style.width = `${percentage}%`;
+                const percentage = cellData / 20;    // cellData * 100 / 2000
+                cell.querySelector('div').style.width = `${percentage}%`;
             }
         }
 
