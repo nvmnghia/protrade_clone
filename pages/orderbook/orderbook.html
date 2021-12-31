@@ -3,6 +3,7 @@
   <head>
     <title>Orderbook</title>
     <link rel="stylesheet" href="../../reset.css">
+    <link rel="stylesheet" href="../shared.css">
     <link rel="stylesheet" href="orderbook.css">
   </head>
   <body>
@@ -13,7 +14,7 @@
     </div>
 
     <!-- Table selector -->
-    <div>
+    <div id="table-selector">
       <a id="day-order" class="table-selected">Day order</a>
       <a id="conditional-order">Conditional order</a>
     </div>
@@ -31,7 +32,7 @@
       <tbody></tbody>
     </table>
 
-    <table id="conditional-order-table">
+    <table id="conditional-order-table" style="display: none;">
       <thead>
         <tr>
           <th scope="col">Order</th>
@@ -40,10 +41,12 @@
           <th scope="col">Quantity</th>
           <th scope="col">Price</th>
           <th scope="col">Expiration Date</th>
-          <th scope="col">WTf</th>
+          <th scope="col">WTF</th>
         </tr>
       </thead>
       <tbody></tbody>
     </table>
+
+    <script src="orderbook.js"></script>
   </body>
 </html>
